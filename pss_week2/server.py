@@ -27,6 +27,8 @@ class SimpleHandler(BaseHTTPRequestHandler):
            self.send_json({"students": get_students()})
         elif self.path == "/assignments":
           self.send_json({"assignments": get_assignments()})
+        elif self.path == "/enrollments":
+          self.send_json({"enrollments": get_enrollments()})
         else:
             self.send_json({"detail": "Not Found"}, 404)
 
